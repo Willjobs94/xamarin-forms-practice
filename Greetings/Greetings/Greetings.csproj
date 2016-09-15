@@ -45,6 +45,7 @@
     <Compile Include="ButtonLogger.cs" />
     <Compile Include="ButtonLoggerPage.cs" />
     <Compile Include="TwoButtonsPage.cs" />
+    <Compile Include="ButtonLambdasPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
