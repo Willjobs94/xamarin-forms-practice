@@ -43,6 +43,7 @@
     <Compile Include="FitToSizeClock.cs" />
     <Compile Include="AccesabilityTest.cs" />
     <Compile Include="ButtonLogger.cs" />
+    <Compile Include="ButtonLoggerPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
