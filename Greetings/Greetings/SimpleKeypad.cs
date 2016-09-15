@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace Greetings
@@ -8,9 +8,12 @@ namespace Greetings
 	{
 		Label displayLabel;
 		Button backspaceButton;
+		IDictionary<string, object> properties = Application.Current.Properties;
 
 		public SimpleKeypad()
 		{
+
+
 			var mainStack = new StackLayout
 			{
 				HorizontalOptions = LayoutOptions.Center,
@@ -68,6 +71,12 @@ namespace Greetings
 				rowStack.Children.Add(digitButton);
 			}
 
+			if (properties.ContainsKey("displayLabelText"))
+			{
+				displayLabel.Text = (string)properties["displayLabelText"];
+				backspaceButton.IsEnabled = displayLabel.Text.Length > 0;
+			}
+
 			Content = mainStack;
 
 		}
@@ -77,6 +86,7 @@ namespace Greetings
 			string text = displayLabel.Text;
 			displayLabel.Text = text.Substring(0, text.Length - 1);
 			backspaceButton.IsEnabled = displayLabel.Text.Length > 0;
+			Application.Current.Properties["displayLabelText"] = displayLabel.Text;
 		}
 
 		void OnDigitButtonClicked(object sender, EventArgs e)
@@ -84,8 +94,7 @@ namespace Greetings
 			var button = (Button)sender;
 			displayLabel.Text += button.StyleId;
 			backspaceButton.IsEnabled = true;
-
-
+			Application.Current.Properties["displayLabelText"] = displayLabel.Text;
 		}
 	}
 }
