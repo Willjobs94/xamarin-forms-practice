@@ -9,7 +9,7 @@ namespace Greetings
 		public App()
 		{
 
-			MainPage = new ButtonLoggerPage();
+			MainPage = new TwoButtonsPage();
 		}
 
 		protected override void OnStart()

@@ -44,6 +44,7 @@
     <Compile Include="AccesabilityTest.cs" />
     <Compile Include="ButtonLogger.cs" />
     <Compile Include="ButtonLoggerPage.cs" />
+    <Compile Include="TwoButtonsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
