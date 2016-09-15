@@ -9,7 +9,7 @@ namespace Greetings
 		public App()
 		{
 
-			MainPage = new ButtonLambdasPage();
+			MainPage = new SimpleKeypad();
 		}
 
 		protected override void OnStart()
