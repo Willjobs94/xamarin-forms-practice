@@ -24,9 +24,9 @@
 			<BoxView.Color>
 				<Color x:FactoryMethod="FromRgb">
 					<x:Arguments>
-						<x:Int>0</x:Int>
-						<x:Int>0.5</x:Int>
-						<x:Int>0</x:Int>
+						<x:Double>0</x:Double>
+						<x:Double>0.5</x:Double>
+						<x:Double>0</x:Double>
 					</x:Arguments>
 				</Color>
 			</BoxView.Color>
