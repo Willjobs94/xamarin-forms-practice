@@ -4,6 +4,8 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Prism.Unity;
+using Microsoft.Practices.Unity;
 
 namespace PrismPractice.iOS
 {
@@ -14,9 +16,14 @@ namespace PrismPractice.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			LoadApplication(new App());
+			LoadApplication(new App(new iOSInitializer()));
 
 			return base.FinishedLaunching(app, options);
 		}
+	}
+
+	public class iOSInitializer : IPlatformInitializer
+	{
+		public void RegisterTypes(IUnityContainer container) { }
 	}
 }
